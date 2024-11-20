@@ -12,7 +12,7 @@ def upsize(x, scale_factor=2):
     x = F.interpolate(x, scale_factor=scale_factor, mode='nearest')
     return x
 
-
+# Adapted from https://github.com/bigmb/Unet-Segmentation-Pytorch-Nest-of-Unets.
 class DecoderBlock(nn.Module):
     def __init__(self,
                  in_channels=512,
